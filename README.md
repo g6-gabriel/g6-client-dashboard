@@ -14,7 +14,6 @@ A private WordPress plugin for Group6 agency clients. Replaces the default WordP
 1. Download the latest `g6-client-dashboard.zip` from [Releases](../../releases).
 2. In WordPress admin go to **Plugins → Add New → Upload Plugin** and upload the zip.
 3. Activate **Group6 Client Dashboard**.
-4. Add the GitHub token to `wp-config.php` (see below) so automatic updates work.
 
 ---
 
@@ -28,19 +27,7 @@ Updates are distributed via GitHub Releases. WordPress will surface an update no
 2. If the manifest version is newer than the installed version, WordPress shows the standard update notice.
 3. Clicking **Update Now** downloads the zip from the GitHub Release and installs it.
 
-### GitHub token (required for private repo)
-
-Because this repo is private, each client site needs a GitHub Personal Access Token to download updates.
-
-Add this line to **`wp-config.php`** on every client site:
-
-```php
-define( 'G6_GITHUB_TOKEN', 'github_pat_xxxxxxxxxxxxxxxxxxxx' );
-```
-
-**Token permissions needed:** `Contents: Read-only` on this repo.
-
-> Never commit a real token to the repo. Rotate tokens annually.
+No token or authentication needed — the repo is public.
 
 ### Manifest URL
 
@@ -93,7 +80,6 @@ The **G6 Dashboard** settings page is only visible to users with an `@group6inc.
 
 Configurable per-site:
 - Account manager name, email, phone, photo
-- Zendesk subdomain (falls back to email if blank)
 - SEO keyword rankings
 
 ---
