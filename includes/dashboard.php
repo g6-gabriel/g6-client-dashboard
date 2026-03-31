@@ -436,7 +436,7 @@ function g6_render_dashboard(): void {
 							<div class="g6-service__icon"><?php echo g6_icon( $svc['icon'] ); ?></div>
 							<h3 class="g6-service__name"><?php echo esc_html( $svc['name'] ); ?></h3>
 							<p class="g6-service__desc"><?php echo esc_html( $svc['description'] ); ?></p>
-							<a href="<?php echo esc_url( $svc['cta_url'] ); ?>" class="g6-service__cta">
+							<a href="<?php echo esc_url( $svc['cta_url'] ); ?>" class="g6-service__cta" target="_blank" rel="noopener">
 								<?php echo esc_html( $svc['cta_label'] ); ?> &rarr;
 							</a>
 						</div>

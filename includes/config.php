@@ -23,7 +23,7 @@ function g6_default_config(): array {
 		'agency_rep_name'  => 'Nate Fineberg',
 		'agency_rep_email' => 'nate@group6inc.com',
 		'agency_rep_phone' => '(802) 342-4656',
-		'agency_rep_photo' => '',
+		'agency_rep_photo' => 'https://group6inc.com/wp-content/uploads/2024/11/nate-fineberg-cta-block-pic.png.webp',
 
 		// SEO Keywords
 		'keywords' => [
