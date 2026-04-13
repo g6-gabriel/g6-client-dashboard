@@ -65,8 +65,10 @@ function g6_get_dashboard_css(): string {
 	}
 	#g6_client_dashboard .postbox-header { display: none !important; }
 	#g6_client_dashboard .inside { padding: 0 !important; margin: 0 !important; }
-	#dashboard-widgets .postbox-container { width: 100% !important; }
-	#dashboard-widgets-wrap #dashboard-widgets #postbox-container-1 { width: 100% !important; }
+	#dashboard-widgets #postbox-container-1 { width: 100% !important; }
+	#dashboard-widgets #postbox-container-2,
+	#dashboard-widgets #postbox-container-3,
+	#dashboard-widgets #postbox-container-4 { width: auto !important; }
 
 	/* ── Design tokens ── */
 	:root {
