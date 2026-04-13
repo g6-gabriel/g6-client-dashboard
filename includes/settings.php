@@ -13,7 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function g6_is_group6_user(): bool {
 	$user = wp_get_current_user();
-	return $user->ID > 0 && str_ends_with( $user->user_email, '@group6inc.com' );
+	return $user->ID > 0 && (
+		str_ends_with( $user->user_email, '@group6inc.com' ) ||
+		str_ends_with( $user->user_email, '@group6interactive.com' )
+	);
 }
 
 // ── Register menu ─────────────────────────────────────────────────────────────
