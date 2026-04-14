@@ -31,11 +31,13 @@ function g6_dashboard_setup(): void {
 	remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' );
 	remove_meta_box( 'dashboard_right_now',   'dashboard', 'normal' );
 	remove_meta_box( 'dashboard_activity',    'dashboard', 'normal' );
+
+	// Remove default welcome panel content here, after WP has registered it.
+	remove_action( 'welcome_panel', 'wp_welcome_panel' );
 }
 
 // ── Hijack the welcome panel slot ─────────────────────────────────────────────
 
-remove_action( 'welcome_panel', 'wp_welcome_panel' );
 add_action( 'welcome_panel', 'g6_render_dashboard' );
 
 // Force the welcome panel to always be visible (never let it be dismissed).
@@ -62,6 +64,12 @@ function g6_get_dashboard_css(): string {
 	/* ── Reset welcome panel chrome ── */
 	#welcome-panel { background: transparent !important; border: none !important; padding: 0 !important; box-shadow: none !important; }
 	#welcome-panel .welcome-panel-close { display: none !important; }
+	#welcome-panel .welcome-panel-content { padding: 0 !important; }
+
+	/* ── Neutralise WordPress welcome-panel typography overrides ── */
+	#welcome-panel h2 { font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; margin: inherit !important; }
+	#welcome-panel h3 { font-size: inherit !important; font-weight: inherit !important; line-height: inherit !important; margin: inherit !important; }
+	#welcome-panel p  { font-size: inherit !important; line-height: inherit !important; margin: inherit !important; }
 
 	/* ── Design tokens ── */
 	:root {
